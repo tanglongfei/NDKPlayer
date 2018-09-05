@@ -1,5 +1,5 @@
 # NDKPlayer
-Android NDK直播框架，使用熊猫直播流(仅用于学习交流)
+Android NDK直播框架，使用熊猫直播流（仅用于学习交流）
 ## 要点： 
 - 1.使用Cmake构建
 - 2.FFmpeg作为底层播放框架
