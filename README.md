@@ -8,7 +8,7 @@ Android NDK直播框架，使用熊猫tv直播流（仅用于学习交流）
 - 5.线程安全的队列
 - 6.native层创建JabaCallHelper类将native层的相关操作回调到java层，创建AudioChannel类和VideoChannel类对音视频分别进行处理
 ## JNI包结构：
-![image](https://github.com/tanglongfei/NDKPlayer/blob/master/image/ndk%E5%8C%85%E7%BB%93%E6%9E%84.png?raw=true)
+![image](https://github.com/tanglongfei/NDKPlayer/blob/master/image/%E7%B1%BB%E7%BB%93%E6%9E%84.png)
 ## 时间节点：
 - 2018-09-05 项目上传
 - 2018-09-11 搭建native框架，包括相关回调，封装音视频相关类，解码器调试等
