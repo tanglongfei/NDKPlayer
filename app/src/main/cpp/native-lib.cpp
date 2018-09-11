@@ -1,17 +1,28 @@
 #include <jni.h>
+#include "TLFFFmpeg.h"
 #include <string>
 
-extern "C"{
-#include <libavcodec/avcodec.h>
+TLFFFmpeg *tlffFmpeg = 0;
+
+JavaVM *javaVM = 0;
+
+int JNI_OnLoad(JavaVM *vm, void *r) {
+
+    javaVM = vm;
+    return JNI_VERSION_1_6;
 }
+
 
 extern "C"
-JNIEXPORT jstring
-
-JNICALL
-Java_com_pineteree_ndkplayer_MainActivity_stringFromJNI(
-        JNIEnv *env,
-        jobject /* this */) {
-    av_version_info();
-    return env->NewStringUTF(av_version_info());
+JNIEXPORT void JNICALL
+Java_com_pineteree_ndkplayer_TLFPlayer_native_1prepare(JNIEnv *env, jobject instance,
+                                                       jstring dataSource_) {
+    const char *dataSource = env->GetStringUTFChars(dataSource_, 0);
+    JabaCallHelper *jabaCallHelper = new JabaCallHelper(javaVM, env, instance);
+    //创建播放器
+    tlffFmpeg = new TLFFFmpeg(jabaCallHelper, dataSource);
+    tlffFmpeg->prepare();
+    env->ReleaseStringUTFChars(dataSource_, dataSource);
 }
+
+
