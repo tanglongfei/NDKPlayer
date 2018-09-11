@@ -7,7 +7,7 @@ Android NDK直播框架，使用熊猫tv直播流（仅用于学习交流）
 - 4.在Android项目中添加静态库，使用Cmake构建（不建议使用mk）
 - 5.线程安全的队列
 - 6.native层创建JabaCallHelper类将native层的相关操作回调到java层，创建AudioChannel类和VideoChannel类对音视频分别进行处理
-## JNI包结构：
+## 类结构：
 ![image](https://github.com/tanglongfei/NDKPlayer/blob/master/image/%E7%B1%BB%E7%BB%93%E6%9E%84.png)
 ## 时间节点：
 - 2018-09-05 项目上传
